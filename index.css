@@ -1,0 +1,36 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 5%; /* Dark background */
+    --foreground: 40 70% 80%; /* Soft gold for text */
+
+    --primary: 220 30% 10%; /* Dark blue-black */
+    --primary-foreground: 40 70% 60%; /* Gold */
+
+    --secondary: 40 70% 50%; /* Bright gold */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    --accent: 40 70% 60%; /* Slightly lighter gold */
+    --accent-foreground: 0 0% 10%; /* Almost black */
+  }
+
+  .dark {
+    /* Similar configuration for dark mode */
+    --background: 0 0% 0%; /* Pure black */
+    --foreground: 40 70% 85%; /* Softer gold */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
